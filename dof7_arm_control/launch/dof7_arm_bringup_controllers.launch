@@ -1,0 +1,14 @@
+<launch>
+
+  <!-- launch Gazebo  -->
+<!--
+  <include file="$(find dof7_arm_gazebo)/launch/dof7_arm_world.launch" />   
+-->
+
+  <!-- launch joint state controller -->
+  <include file="$(find dof7_arm_control)/launch/dof7_arm_joint_states.launch" />
+
+  <!-- launch trajectory controller -->
+  <include file="$(find dof7_arm_control)/launch/dof7_arm_trajectory_control.launch" />
+
+</launch>

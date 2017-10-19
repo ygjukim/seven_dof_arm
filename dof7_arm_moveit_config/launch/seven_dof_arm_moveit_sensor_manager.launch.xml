@@ -1,0 +1,3 @@
+<launch>
+	<rosparam file="$(find dof7_arm_moveit_config)/config/sensors_rgbd_camera.yaml" command="load" />
+</launch>

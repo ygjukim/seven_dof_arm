@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: dof7_arm_description
+    relative_path: urdf/seven_dof_arm.xacro
+  SRDF:
+    relative_path: config/seven_dof_arm.srdf
+  CONFIG:
+    author_name: Y.J.Kim
+    author_email: ygjukim@gmail.com
+    generated_timestamp: 1506654187

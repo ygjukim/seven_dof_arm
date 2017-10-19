@@ -1,0 +1,19 @@
+<launch>
+	
+	<!-- launch Gazebo & Controllers -->
+	<!--
+  	<include file="$(find dof7_arm_gazebo)/launch/dof7_arm_world.launch" />   
+
+	<include file="$(find dof7_arm_control)/launch/dof7_arm_bringup_controllers.launch">
+	-->
+
+	<!-- Run the main MoveIt executable without trajectory execution (we do not have controllers configured by default) -->
+	<include file="$(find dof7_arm_moveit_config)/launch/move_group.launch">
+		<arg name="joint_state_topic" value="/seven_dof_arm/joint_states" />
+	</include>
+
+	<!-- Run Rviz and load the default config to see the state of the move_group node -->
+	<include file="$(find dof7_arm_moveit_config)/launch/moveit_rviz.launch">
+		<arg name="config" value="true"/>
+	</include>
+</launch>
